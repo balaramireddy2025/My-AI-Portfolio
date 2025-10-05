@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<article>
+    <h2 class="mb-3">{{ title.replace('_', ' ').title() }}</h2>
+    <div class="mb-4">
+        {{ content | safe }}
+    </div>
+    <a href="/blog" class="btn btn-secondary">Back to Blog</a>
+</article>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>AI Demos</h2>
+
+<form method="post" action="/demo/text-generator" class="mb-4">
+    <div class="mb-3">
+        <label for="input_text" class="form-label">Enter Text:</label>
+        <input type="text" name="input_text" class="form-control" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Generate</button>
+</form>
+
+{% if input_text %}
+<h5>Input:</h5>
+<p>{{ input_text }}</p>
+<h5>Output:</h5>
+<p>{{ output_text }}</p>
+{% endif %}
+{% endblock %}
